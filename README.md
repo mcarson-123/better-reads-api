@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Better Reads API
+Better Reads is my web application that allows my friends to easily view my library. It uses the Goodreads API as the data source. The Goodreads API has a few issues that make it undesirable to connect to it directly from the web application, and necessitate this intermediary API layer: no CORs, and XML responses (which were frustratingly ugly for me to parse in JS).
 
-Things you may want to cover:
+### To Run
+This is a bog-standard Rails app created from the Rails generator, nothing special to see here! As such to run locally, simply use
+`rails s`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Why No Tests?
+Wait, aren't you RSpec's biggest fan? Maybe, but... the XML response is so crufty I didn't really relish the opportunity to mock it out yet. There's also not a lot going on in this API yet beyond the http request so there's not a huge amount of logic to test. Manual testing on the front end will suffice for now.
